@@ -1,0 +1,58 @@
+
+.card-wrap {
+    float:left;
+    width:100%;
+    padding:5px;
+  }
+  @media (min-width: 500px) {
+    .card-wrap {
+      width:50%;
+    }
+    .contact {
+        width:50%;
+    }
+  }
+  @media (min-width: 720px) {
+    .card-wrap {
+      width:25%;
+    }
+    .contact {
+        width:25%;
+    }
+  }
+  
+  
+  .card {
+    background-color:white;
+    border-radius:5px;
+    border:1px solid #ccc;
+    border-bottom:2px solid #ccc;
+  }
+  .card > div {
+    padding:0 1em;
+    height: 152px;
+  }
+
+  .detailsCont {
+  }
+
+  .contact {
+    margin-top: 2px;
+    background-color: #555555; /* Green */
+    border: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition-duration: 0.4s;
+  }
+
+  .contact:hover {
+      background-color: #988686;
+  }
