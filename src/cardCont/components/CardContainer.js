@@ -107,7 +107,6 @@ class CardContainer extends Component {
         return (
             <div className="container">
                 <div className="heading-cont">
-                    <div className="heading">Facebook employees</div>
                     <div className="filterParent">
                         <button className={`btn ${this.getAdditionalClass("all")}`}onClick={()=>{ this.setFilter("all") }}> Remove filter</button>
                         <button className={`btn ${this.getAdditionalClass("male")}`} onClick={()=>{ this.setFilter("male") }}> Male</button>
