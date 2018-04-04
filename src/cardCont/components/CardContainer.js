@@ -12,13 +12,18 @@ class CardContainer extends Component {
             filterType: "all"
         }
     }
-
+    /**
+     * Sets state of the modal
+     * @param {Boolean} state modal state
+     */
     setModalState(state) {
         this.setState({
             open: state
         });
     }
-
+    /**
+     * Returns user contact details
+     */
     getAddressField(data, type) {
         if(!data || data.length === 0) {
             return null;
@@ -30,7 +35,9 @@ class CardContainer extends Component {
             </div>
         );
     }
-
+    /**
+     * Returns modal with all the necessary contact information
+     */
     getUserDetailsModal() {
         const { open, userContactDetails } = this.state;
         if(!open) {
@@ -54,26 +61,36 @@ class CardContainer extends Component {
             </Modal>
         );
     }
-
+    /**
+     * Sets state on closing of modal
+     */
     onCloseModal() {
         this.setState({
             open: false,
             userContactDetails: null
         });
     }
-
+    /**
+     * sets user infor in componnet state
+     * @param {Array} details user contact details
+     */
     setUserCOntactDetails(details) {
         this.setState({
             userContactDetails: details
         });
     }
-
+    /**
+     * Sets filter type info in state
+     * @param {String} state 
+     */
     setFilter(state) {
         this.setState({
             filterType: state
         })
     }
-
+    /**
+     * Iterates over user object and returns component based on filter set
+     */
     getUserCards() {
         const { allUsers } = this.props;
         const { filterType } = this.state;
@@ -94,7 +111,10 @@ class CardContainer extends Component {
             })
         )
     }
-
+    /**
+     * Changes the filter button class
+     * @param {String} type type of filter button
+     */
     getAdditionalClass(type) {
         const { filterType } = this.state;
         if(type === filterType) {
@@ -102,7 +122,9 @@ class CardContainer extends Component {
         }
         return null;
     }
-
+    /**
+     * Renders the component
+     */
     render() {
         return (
             <div className="container">

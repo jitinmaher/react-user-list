@@ -5,7 +5,10 @@ import { emojiIndex } from 'emoji-mart'
 import "../styles/styles.css";
 
 class Card extends Component {
-
+    /**
+     * Returns emoji based on like of the user
+     * @param {Array} likes likes of the user 
+     */
     getEmoji(likes) {
         if(likes.length === 0) {
             return "NA";
@@ -19,7 +22,9 @@ class Card extends Component {
         }
         return allLikes;
     }
-
+    /**
+     * Renders the user card 
+     */
     render() {
         const { user } = this.props;
         const { name, likes, birthday, memberSince, contact } = user;
