@@ -1,12 +1,12 @@
 function getDateDifference(dateString) {
     var today = new Date();
-    var birthDate = new Date(dateString.replace(/-/g, "/"));
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
+    var givenDate = new Date(dateString.replace(/-/g, "/"));
+    var diff = today.getFullYear() - givenDate.getFullYear();
+    var m = today.getMonth() - givenDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < givenDate.getDate())) {
+        diff--;
     }
-    return age;
+    return diff;
 }
 
 export { getDateDifference };
