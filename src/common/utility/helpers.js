@@ -1,4 +1,4 @@
-function getAge(dateString) {
+function getDateDifference(dateString) {
     var today = new Date();
     var birthDate = new Date(dateString.replace(/-/g, "/"));
     var age = today.getFullYear() - birthDate.getFullYear();
@@ -9,4 +9,4 @@ function getAge(dateString) {
     return age;
 }
 
-export { getAge };
+export { getDateDifference };

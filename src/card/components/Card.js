@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ImageUrl from '../../common/images/imageUrls';
-import { getAge } from '../../common/utility/helpers';
+import { getDateDifference } from '../../common/utility/helpers';
 import { emojiIndex } from 'emoji-mart'
 import "../styles/styles.css";
 
@@ -35,8 +35,8 @@ class Card extends Component {
                     <img src={ImageUrl[user.gender]} className="card-img" alt="user profile"/>
                     <div className="detailsCont">
                         <h4>{`${first} ${last}`}</h4>
-                        <p>Age: {getAge(birthday)}</p>
-                        <p>Expierence: {getAge(memberSince)} years</p>
+                        <p>Age: {getDateDifference(birthday)}</p>
+                        <p>Expierence: {getDateDifference(memberSince)} years</p>
                         <span>Likes: {this.getEmoji(likes)}</span>
                     </div>
                     <button className="contact" onClick={() => {
